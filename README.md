@@ -37,12 +37,13 @@ Active checks (explicit, gated by instance)
 ## Requirements
 
 * JDK 17
-* Gradle 8.x (no wrapper is checked in; use a local install, or run `gradle wrapper` once to generate one)
+
+The Gradle wrapper (`./gradlew`, pinned to Gradle 8.14.1) is checked in, so no separate Gradle install is needed.
 
 ## Build
 
 ```bash
-gradle shadowJar
+./gradlew shadowJar
 ```
 
 The build produces an installable fat JAR at `build/libs/supascan-burp-0.1.0.jar`, with Gson shaded (under `com.supascan.shaded.gson`) and the Montoya API left out, since Burp provides it at runtime.
